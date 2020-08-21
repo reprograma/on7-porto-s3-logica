@@ -457,6 +457,12 @@ Hora de ver com calma o que acontece em cada parte desse código:
 - O último trecho atualiza o estado do loop antes de cada nova iteração.
 - Os três trechos dentro do parêntese devem sempre ser separados por ponto-e-vírgula (`;`). 
 
+Toda vez que vamos pensar em um `for`, pensamos em três perguntas:
+
+1. O que queremos que seja repetido a cada loop?
+2. Que valor(es) queremos alterar a cada loop?
+3. Quando queremos que o loop pare?
+
 Agora vamos ver um código que calcula 2^10 (2 exponencial 10), usando `for`:
 
 ```js
