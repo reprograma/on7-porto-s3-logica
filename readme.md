@@ -1,4 +1,4 @@
-# Aula 3 - Funções, escopo e loops
+#Aula 3 - Funções, escopo e loops
 
 Nesta aula vamos tratar de mais conceitos *importantes* de lógica de programação com JavaScript. Procure ler com calma e testar livremente os exemplos para internalizar bem!
 
@@ -22,7 +22,7 @@ Nesta aula vamos tratar de mais conceitos *importantes* de lógica de programaç
 * [break](###break)
 * [Diferenças entre `for` e `while`](###diferenças)
 
-## Funções
+##Funções
 
 O que é uma função?
 Uma função é um bloco de código/instruções. Usando funções, podemos "chamar" o código que queremos executar, quando queremos executar, e dando para o código as informações que ele precisa.
@@ -89,7 +89,7 @@ function operacaoMatematica(numero1, numero2, numero3) {
 operacaoMatematica(1, 1, 1)
 ```
 
-### Return
+###Return
 
 Qual a diferença entre `return` e `console.log()`?
 
@@ -99,7 +99,7 @@ Já o `return` é o comando que usamos quando realmente precisamos que a funçã
 
 Em alguns dos casos acima (casos 1 e 3), a própria função já define `console.log()` então a informação já vai ser exibida no console. Já no caso 4, se quisermos conferir o retorno da função no console, devemos chamá-la no formato: `console.log(operacaoMatematica(1, 1, 1))`.
 
-### Formas
+###Formas
 **Declaração x Expressão**
 
 A forma que acabamos de ver (que chamei de "clássica") é a que chamamos de declaração de função, com a palavra-chave `function` e depois o nome que damos pra função.
@@ -158,7 +158,7 @@ const expressaoDeFuncao = function() {
 ```
 Se você rodar o código como está, vai receber um erro do tipo `expressaoDeFuncao is not defined` ("expressaoDeFuncao não está definido") porque o JS não consegue chamar uma função antes de ler o que ela faz, e uma coisa está depois da outra. Troque as linhas de lugar e tudo volta a funcionar!
 
-### Arrow
+###Arrow
 **Arrow Functions (função seta)**
 
 Por fim, uma última forma (por enquanto!) de se escrever funções. Essa forma veio com as implementações mais recentes do JS, o tal ES6 ou JS2015 e é chamada de *arrow function*, por ser caracterizada pela `=>` (arrow, ou seta/flecha).
@@ -195,7 +195,7 @@ const imprimirSomaEPessoa = (num1, num2, nome) => {
 console.log(imprimirSomaEPessoa(1, 1, 'Helena'))
 ```
 
-### iife
+###iife
 **IIFE (Immediately Invoked Function Expression), ou funções imediatas**
 
 É uma forma de declarar uma função e já executá-la em seguida, sem precisar chamar a função em uma outra linha de código. Pode funcionar tanto com expressões ou com funções declaradas. Basta envolver toda a função com parênteses e incluir parênteses vazios no final:
@@ -226,7 +226,7 @@ const imprime = (function () {
 }())
 ```
 
-### Dicas
+###Dicas
 Algumas dicas de funções que você pode levar pra vida:
 
 Listamos alguns princípios que te vão te ajudar a escrever funções melhores:
@@ -242,7 +242,7 @@ Uma vez identificado um padrão - por exemplo, se você escreveu dois pedaços d
 * **Less Is More**: Para serem o mais legíveis possível e reduzir a
   tentação de fazer mais de uma coisa, as funções devem ser tão pequenas quanto for possível. Se a função fica muito longa, é melhor considerar separá-la.
 
-### Links
+###Links
 
 Alguns links e referências.
 Esses links têm bastante conteúdo, vá se familiarizando aos pouquinhos!
@@ -254,7 +254,7 @@ Esses links têm bastante conteúdo, vá se familiarizando aos pouquinhos!
 
 ***
 
-## Escopos
+##Escopos
 
 Escopo é como chamamos o contexto onde as coisas acontecem no código. Ou seja, onde cada trecho de código é lido, interpretado e pode ser acessado.
 
@@ -285,7 +285,7 @@ exemplo()
 ```
 Agora sim.
 
-### Nested 
+###Nested 
 **Nested Scopes (escopos aninhados)**
 
 Se o escopo está aninhado dentro do escopo direto de uma variável, a
@@ -303,7 +303,7 @@ function textoExterno(texto) {
 textoExterno('olar')
 ```
 
-### Sombreamento
+###Sombreamento
 
 É possível declarar uma variável com o mesmo nome em um escopo interno
 de uma função, com isso o acesso à variável externa é bloqueado no escopo
@@ -323,7 +323,7 @@ console.log(variavel); // global
 
 Dentro da função `exemplo`, a variável global `variavel` é "sombreada" pela variável local `variavel`.
 
-### let 
+###let 
 **Declaração de variáveis no escopo local com `let`**
 
 A "palavra" `let` declara uma variável de alcance local. Ela pode, opcionalmente,
@@ -359,13 +359,13 @@ Bom, então `var` é melhor né? **Não!** Nós normalmente não queremos esse c
 
 Então, nada de `var`! As variáveis `let` e `const` surgiram justamente pra atender a essa necessidade de maior organização no código.
 
-### Links
+###Links
 
 - Uma geral sobre [escopos](https://pt.wikipedia.org/wiki/Escopo_(computa%C3%A7%C3%A3o)) na Wikipedia
 
 ***
 
-## Loops
+##Loops
 **Loops ou laços de repetição**
 
 Os *loops* são estruturas repetitivas, que permitem executar um código várias vezes,
@@ -390,7 +390,7 @@ mais. E se fosse uma lista com 1000 números? Ficaria impossível.
 
 O que precisamos aqui é dar um jeito de repetir partes de código. Esta forma de **controle de fluxo** é chamada de loop. Os loops permitem voltar a certo ponto no programa em que estivemos antes e repetir qualquer operação a partir do estado em que estamos.
 
-### while
+###while
 **Loop `while`**
 
 O loop mais simples é o loop `while` (que significa "enquanto" em português). Um
@@ -427,7 +427,7 @@ queremos imprimir só os pares).
 É importante entender que, se não modificamos o valor de `numero` com a segunda sentença, a condição `(numero <=12)` sempre será `true` e teremos um loop infinito.
 
 
-### do
+###do
 **Loop `do`**
 
 O loop `do` é uma estrutura similar ao loop `while`. A diferença está em um só ponto: um loop `do` sempre executa o que está dentro do bloco *pelo menos uma vez* e começa a verificar se devería parar somente depois da primeira execução.
@@ -441,7 +441,7 @@ do {
 ```
 A palavra `do` significa "fazer" em inglês, então podemos ler o bloco acima dessa forma: "*faça* {o que está no bloco} *enquanto* a variável `numero` for menor que 2". Teoricamente esse bloco não deveria fazer nada, pois a variável `numero` já começa declarada com valor 2, mas como o loop `do` sempre roda o que está dentro do bloco pelo menos uma vez, vai imprimir `2` no console pelo menos uma vez antes de ver o que tem no "enquanto" (`while`). 
 
-### For
+###For
 
 O `for` é um loop mais completo e é bastante utilizado para situações mais complexas, quando precisamos fazer um controle mais "refinado" do que acontece em cada loop (ou iteração).
 
@@ -491,7 +491,7 @@ O *incremento* (`contador++`) é executado depois de cada execução do bloco do
 
 Lembrando que, se não damos ao loop uma condição de parada (por exemplo, incrementando a variável `contador` até que chegue ao valor de `10`) vamos cair no loop infinito!
 
-### Break
+###Break
 
 Fazer com que a condição do loop produza _false_ não é a única forma de finalizar um loop. Podemos usar a sentença especial `break`, utilizada no `switch`, que tem o efeito de sair imediatamente do loop.
 
@@ -517,7 +517,7 @@ acidentalmente escrevesse uma condição que sempre produza `true`, o seu progra
 
 A palavra chave `continue` é parecida com o `break` pois influencia o progresso do loop. Quando `continue` é lido no bloco de um loop, o controle sai do bloco do loop imediatamente e continua na próxima iteração do loop.
 
-### Diferenças 
+###Diferenças 
 **As diferenças entre `for` e `while`**
 
 Resumidamente, usamos o `for` quando sabemos quantas repetições vão ser
@@ -527,7 +527,7 @@ Por exemplo, se queremos dar o comando específico "gire as pás do ventilador 1
 
 Mas, se queremos dar uma instrução do tipo "enquanto estiver calor gire as pás do ventilador", não sabemos quantas vezes vamos girar o ventilador até a temperatura baixar, então nesse caso é melhor usar o `while`.
 
-### Links
+###Links
 
 - [Laços e iterações](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes) no MDN
 - [For](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for) no MDN
