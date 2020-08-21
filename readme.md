@@ -104,7 +104,7 @@ Em alguns dos casos acima (casos 1 e 3), a própria função já define `console
 
 A forma que acabamos de ver (que chamei de "clássica") é a que chamamos de declaração de função, com a palavra-chave `function` e depois o nome que damos pra função.
 
-Outra forma de escrever funções é dessa forma:
+Outra forma de escrever funções:
 
 ```js
 const olar = function() {
@@ -128,9 +128,9 @@ Qual a diferença?
 
 Nessa versão, a função em si não tem nome (é uma função anônima) e chamamos através de uma variável. De resto, escrevemos de forma parecida.
 
-A diferença está num comportamento do JS chamado içamento, ou *hoisting*. Quando o arquivo JS é carregado, todas as funções declaradas (que têm nome) são içadas, ou puxadas para o topo co contexto.
+A diferença está num comportamento do JS chamado içamento, ou *hoisting*. Quando o arquivo JS é carregado, todas as funções declaradas (que têm nome) são içadas, ou puxadas para o topo do contexto.
 
-O que? Traduzindo, é como se, quando o arquivo fosse carregado, o JS puxasse para o começo do código todas as funções que têm nome e já lisse todas elas. Então não importa em que parte do código elas são chamadas, o JS já sabe o que elas fazem.
+O que? Traduzindo, é como se, quando o arquivo fosse carregado, o JS puxasse para o começo do código todas as funções que têm nome e já gravasse todas elas. Então não importa em que parte do código elas são chamadas, o JS já sabe o que elas fazem.
 
 Já as expressões (esse último caso que vimos) são anônimas, então o JS não sabe o que elas fazem até que chegue na linha certa. Na prática:
 
