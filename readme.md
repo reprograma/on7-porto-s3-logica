@@ -2,25 +2,25 @@
 
 Nesta aula vamos tratar de mais conceitos *importantes* de lógica de programação com JavaScript. Procure ler com calma e testar livremente os exemplos para internalizar bem!
 
-[Funções](##Funções)
-* [`return` x `console.log()`](###Return)
-* [Declaração de função x expressão de função](###Formas)
-* [Arrow Function](###Arrow)
-* [IIFE](###iife)
-* [Dicas para escrever funções](###Dicas)
-* [Links e referências](###Links)
+[Funções](##-Funções)
+* [`return` x `console.log()`](###-Return-x-Console)
+* [Declaração de função x expressão de função](###-Declaração-de-Função-x-Expressão-de-função)
+* [Arrow Function](###-Arrow-Functions-(função-seta))
+* [IIFE](###-iife)
+* [Dicas para escrever funções](###-Dicas)
+* [Links e referências](###-Links)
 
-[Escopos](##Escopos)
-* [Escopos aninhados](###Nested)
-* [Sombreamento (*shadowing*)](###Sombreamento)
-* [Declaração de `let` em escopos locais](###let)
+[Escopos](##-Escopos)
+* [Escopos aninhados](###-Nested-Scopes-(escopos-aninhados))
+* [Sombreamento (*shadowing*)](###-Sombreamento)
+* [Declaração de `let` em escopos locais](###-Declaração-de-variáveis-no-escopo-local-com-`let`)
 
-[Loops](##Loops)
-* [while](###while)
-* [do... while](###do)
-* [for](###for)
-* [break](###break)
-* [Diferenças entre `for` e `while`](###diferenças)
+[Loops](##-Loops-ou-laços-de-repetição)
+* [while](###-while)
+* [do... while](###-do)
+* [for](###-for)
+* [break](###-break)
+* [Diferenças entre `for` e `while`](###-Diferenças-entre-`for`-e-`while`)
 
 ## Funções
 
@@ -89,7 +89,7 @@ function operacaoMatematica(numero1, numero2, numero3) {
 operacaoMatematica(1, 1, 1)
 ```
 
-### Return
+### Return x Console
 
 Qual a diferença entre `return` e `console.log()`?
 
@@ -99,8 +99,7 @@ Já o `return` é o comando que usamos quando realmente precisamos que a funçã
 
 Em alguns dos casos acima (casos 1 e 3), a própria função já define `console.log()` então a informação já vai ser exibida no console. Já no caso 4, se quisermos conferir o retorno da função no console, devemos chamá-la no formato: `console.log(operacaoMatematica(1, 1, 1))`.
 
-### Formas
-**Declaração x Expressão**
+### Declaração de Função x Expressão de função
 
 A forma que acabamos de ver (que chamei de "clássica") é a que chamamos de declaração de função, com a palavra-chave `function` e depois o nome que damos pra função.
 
@@ -158,8 +157,7 @@ const expressaoDeFuncao = function() {
 ```
 Se você rodar o código como está, vai receber um erro do tipo `expressaoDeFuncao is not defined` ("expressaoDeFuncao não está definido") porque o JS não consegue chamar uma função antes de ler o que ela faz, e uma coisa está depois da outra. Troque as linhas de lugar e tudo volta a funcionar!
 
-### Arrow
-**Arrow Functions (função seta)**
+### Arrow Functions (função seta)
 
 Por fim, uma última forma (por enquanto!) de se escrever funções. Essa forma veio com as implementações mais recentes do JS, o tal ES6 ou JS2015 e é chamada de *arrow function*, por ser caracterizada pela `=>` (arrow, ou seta/flecha).
 
@@ -285,8 +283,7 @@ exemplo()
 ```
 Agora sim.
 
-### Nested 
-**Nested Scopes (escopos aninhados)**
+### Nested Scopes (escopos aninhados)
 
 Se o escopo está aninhado dentro do escopo direto de uma variável, a
 variável será acessível a todos os escopos:
@@ -323,8 +320,7 @@ console.log(variavel); // global
 
 Dentro da função `exemplo`, a variável global `variavel` é "sombreada" pela variável local `variavel`.
 
-### let 
-**Declaração de variáveis no escopo local com `let`**
+### Declaração de variáveis no escopo local com `let`
 
 A "palavra" `let` declara uma variável de alcance local. Ela pode, opcionalmente,
 ser iniciada com algum valor e pode ser reatribuída (diferente de `const`).
@@ -365,8 +361,7 @@ Então, nada de `var`! As variáveis `let` e `const` surgiram justamente pra ate
 
 ***
 
-## Loops
-**Loops ou laços de repetição**
+## Loops ou laços de repetição
 
 Os *loops* são estruturas repetitivas, que permitem executar um código várias vezes,
 dependendo se uma condição **continua sendo** verdadeira.
@@ -517,8 +512,7 @@ acidentalmente escrevesse uma condição que sempre produza `true`, o seu progra
 
 A palavra chave `continue` é parecida com o `break` pois influencia o progresso do loop. Quando `continue` é lido no bloco de um loop, o controle sai do bloco do loop imediatamente e continua na próxima iteração do loop.
 
-### Diferenças 
-**As diferenças entre `for` e `while`**
+### Diferenças entre `for` e `while`
 
 Resumidamente, usamos o `for` quando sabemos quantas repetições vão ser
 realizadas e o `while` quando não sabemos.
@@ -531,3 +525,4 @@ Mas, se queremos dar uma instrução do tipo "enquanto estiver calor gire as pá
 
 - [Laços e iterações](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes) no MDN
 - [For](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for) no MDN
+- Lista de exercícios do [W#Schools](https://www.w3schools.com/js/exercise_js.asp?)

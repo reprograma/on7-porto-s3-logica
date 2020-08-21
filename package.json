@@ -1,0 +1,23 @@
+{
+  "name": "on7-porto-s3-logica",
+  "version": "1.0.0",
+  "description": "Nesta aula vamos tratar de mais conceitos *importantes* de lógica de programação com JavaScript. Procure ler com calma e testar livremente os exemplos para internalizar bem!",
+  "main": "exercicios-for-corrigidos.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reprograma/on7-porto-s3-logica.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reprograma/on7-porto-s3-logica/issues"
+  },
+  "homepage": "https://github.com/reprograma/on7-porto-s3-logica#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
