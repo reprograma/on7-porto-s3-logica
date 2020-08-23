@@ -526,3 +526,79 @@ Mas, se queremos dar uma instrução do tipo "enquanto estiver calor gire as pá
 - [Laços e iterações](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Lacos_e_iteracoes) no MDN
 - [For](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for) no MDN
 - Lista de exercícios do [W#Schools](https://www.w3schools.com/js/exercise_js.asp?)
+
+***
+
+## Arrays
+
+O que acontece quando precisamos trabalhar com várias informações? 
+Por exemplo, por enquanto estamos fazendo cálculos ou operações com poucos dados, então podemos fazer:
+```js
+let num1 = 3
+let num2 = 45
+let num3 = 12
+console.log(num1 + num2 + num3)
+```
+
+Mas na vida real não costuma ser assim. E se nosso sistema tivesse que imprimir o valor total de uma compra de 100 ítens?
+Para isso usamos estruturas de dados, e a array é uma delas: uma array é uma **lista ordenada de dados**. Usando arrays, podemos guardar e também manipular uma quantidade qualquer de dados que estão guardados em uma única variável.
+
+O caso acima, então, ficaria da seguinte forma:
+```js
+const numeros = [3, 45, 12]
+```
+
+A array é caracterizada pelos colchetes `[]`, e todos os dados que vão dentro delas são separados por vírgulas `,`. Vamos ver por partes:
+- Os colchetes `[]` indicam onde a array começa e termina.
+- Todos os dados que estão dentro da array devem ser separados por vírgula `,`.
+- Cada posição dentro da array (chamamos essas posições de *índices*  - guarde esse nome!) é fixa e numerada, começando em zero.
+
+Como assim?
+A array é uma lista *ordenada*, isso significa que cada dado que está dentro dela ocupa uma determinada posição. Assim:
+
+```js
+// índice        0  1   2   3    4    5  6   7  8  9
+const numeros = [3, 45, 12, 456, 656, 3, 55, 2, 6, 888]
+```
+
+Então podemos dizer que o número 12 está no **índice 2 da array `numeros`**. É muito importante lembrar sempre que a **a contagem começa a partir do índice zero**! 
+
+Então, se quisermos acessar determinado dado que está dentro da array, devemos dizer em qual índice ele se encontra, usando os colchetes para informar o número do índice:
+```js
+console.log(numeros[2])  // 12
+```
+
+Para saber quantos elementos (ou seja, quantos dados separados por vírgulas) temos em uma array, usamos `.length`:
+```js
+console.log(numeros.length) //10
+```
+Ou seja, a array `numeros` tem 10 elementos, e para cada um é atribuído um *índice* que vai de 0 a 9. Cuidado para não se confundir ;)
+Você talvez tenha se perguntado por que `.length`, que usamos para ver qual a quantidade de caracteres em uma string, também funcionou na array. É porque, "por baixo dos panos", dados do tipo string entram na memória do computador da seguinte forma:
+```js
+const palavraString = "banana" // ['b', 'a', 'n', 'a', 'n', 'a']
+```
+
+Ou seja, para o JavaScript (e também as outras linguagens) uma string nada mais é do que uma array de caracteres.
+Faça o teste!
+```js
+const x = 'banana'
+console.log(x[2]) //'n'
+```
+
+Finalizando por enquanto, vamos ver duas características de arrays que são **específicas do JavaScript**:
+
+1. Cada array pode conter dados de diferentes tipos em cada índice. Por exemplo:
+```js
+const arrayMista = [1, "banana", true, {chave: "valor"}, [1, true, "gatinho"], 55.6]
+```
+Essa é uma particularidade do JavaScript. As linguagens de programação normalmente só permitem arrays do mesmo tipo de dado, ou seja:
+```js
+const arrayNums = [1, 4, 73, 55, 43]
+const arrayStrings = ["banana", "gatinho", "olar"]
+const arrayBool = [true, true, false, true, false]
+const arrayObj = [{chave: "valor"}, {chave: "valor"}, {chave: "valor"}]
+```
+
+2. O comprimento da array (ou seja, a quantidade de elementos que tem dentro) é calculado dinamicamente e cresce automaticamente. Ou seja, diferente de outras linguagens, quando criamos uma array com JavaScript não precisamos dizer quantos elementos ela terá e podemos adicionar elementos dentro de uma array a qualquer hora, indefinidamente (enquanto a memória aguentar!).
+
+Por enquanto é só por esta aula. Na próxima veremos como utilizar e modificar arrays.

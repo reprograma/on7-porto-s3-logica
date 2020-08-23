@@ -2,7 +2,7 @@
   "name": "on7-porto-s3-logica",
   "version": "1.0.0",
   "description": "Nesta aula vamos tratar de mais conceitos *importantes* de lógica de programação com JavaScript. Procure ler com calma e testar livremente os exemplos para internalizar bem!",
-  "main": "exercicios-for-corrigidos.js",
+  "main": "exercicios-for.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
