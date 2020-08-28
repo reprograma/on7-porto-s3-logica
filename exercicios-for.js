@@ -64,6 +64,20 @@ function contagemRegressiva(numInicial, numFinal) {
 
 // 7) crie uma função que receba um número positivo inteiro, itere de 1 ao número e some SOMENTE todos os números múltiplos de 3 OU 5. Por exemplo, recebendo 15, o valor retornado deverá ser 60, ou seja, a soma de todos os números múltiplos de 3 ou 5 entre 0 e 15 (3 + 5 + 6, etc).
 
+                          //15
+function somaTresOuCinco(num) { 
+  let soma = 0          
+                        //15
+  for (let i = 0; i <= num; i++){
+    if (i % 3 === 0 || i % 5 === 0) {
+      soma += i
+    }
+  }
+  return soma
+}
+
+console.log(somaTresOuCinco(15))
+
 // 8) altere a função acima para, ao invés de somar múltiplos de 5 ou 3, fazer isso com qualquer número de 1 a 9. Os números serão recebidos via parâmetro de função, por exemplo: `function somaMultiplos(num, multiplo1, multiplo2)` pode ser chamada com os valores `somaMultiplos(100, 2, 4) e verificar os números múltiplos de 2 e 4. Extra: antes de seguir com o cálculo, verificar se os números recebidos estão mesmo entre 1 e 9; caso não estejam, imprimir o aviso "informe múltiplos de 1 a 9" e encerrar o programa.
 
 // 9) crie uma função que receba um número qualquer devolva o seguinte padrão como resultado (inclusive com os espaços). Por exemplo, caso receba o número 5 como parâmetro:
@@ -72,7 +86,16 @@ function contagemRegressiva(numInicial, numFinal) {
 // ***
 // ****
 // *****
-// ******
+
+function escadinha(num) {
+  let estrela = ''
+  for (let i = 0; i <= num; i++) {
+    estrela += '*'
+    console.log(estrela)
+  }
+}
+
+escadinha(10)
 
 // DESAFIO EXTRA: refaça o exercício acima, porém agora com o seguinte padrão:
 //     *
@@ -81,3 +104,12 @@ function contagemRegressiva(numInicial, numFinal) {
 //  ****
 // *****
 
+// i = 0
+// j = 0
+for (let i = 2; i < 10; i++) {
+  
+  for (let j = 10; j < 10; j++) {
+    // resolver aqui
+  }
+
+}

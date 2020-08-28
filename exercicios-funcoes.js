@@ -75,6 +75,20 @@ console.log(divideSemZero(10, 2))
 // 4. Se todos os parâmetros forem passados, retorne a soma do primeiro com o segundo, e o resultado dividido pelo terceiro.
 // 5. Se nenhum parâmetro for passado, retorne "não recebeu parâmetro"
 
+function recebeTresParametros(param1, param2, param3) {
+  if (param1 != undefined && param2 === undefined && param3 === undefined) {
+    return param1
+  } else if (param1 != undefined && param2 != undefined && param3 === undefined) {
+    return param1 + param2
+  } else if (param1 != undefined && param2 != undefined && param3 != undefined) {
+    return (param1 + param2) / param3
+  } else {
+    return "não recebeu parâmetro"
+  }
+}
+
+console.log(recebeTresParametros(2, 2, 2)) // 2
+
 // 8) crie uma função que receba uma string como parâmetro, e retorne essa mesma string invertida. Por exemplo, recebendo "reprograma", vai retornar "amargorper". Para isso, você vai ter que pesquisar como usar JavaScript para inverter uma string.
 
 // 9) agora que você já sabe reverter strings, crie uma função que receba uma string, verifique se é um palíndromo e retorne true ou false. Exemplo de palíndromo: "arara".
